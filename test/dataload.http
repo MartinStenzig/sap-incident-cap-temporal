@@ -1,0 +1,42 @@
+@server = http://localhost:4004
+
+
+
+### Business Object Load
+POST {{server}}/admin/WorkAssignments HTTP/1.1
+Content-Type: application/json
+
+{
+    "validFrom"            : "2021-02-01T01:01:01.141Z",
+    "validTo"              : "2021-02-15T01:01:01.000Z",
+    "role" : "Homework"
+}
+### Business Object Load
+POST {{server}}/admin/WorkAssignments HTTP/1.1
+Content-Type: application/json
+
+{
+    "validFrom"            : "2021-02-16T01:01:01.141Z",
+    "validTo"              : "2021-02-18T01:01:01.000Z",
+    "role" : "TestRole"
+}
+### Business Object Load
+POST {{server}}/admin/WorkAssignments HTTP/1.1
+Content-Type: application/json
+
+{
+    "validFrom"            : "2021-02-18T01:01:01.001Z",
+    "role" : "TestRole2"
+}
+
+
+### Business Object - Read
+GET {{server}}/admin/WorkAssignments?sap-valid-at=date'2020-01-01' HTTP/1.1
+
+### Business Object - Read
+GET {{server}}/admin/WorkAssignments?sap-valid-from=date'2020-01-01'&sap-valid-to=date'2020-12-31' HTTP/1.1
+
+
+### Business Object - Read
+GET {{server}}/admin/WorkAssignments HTTP/1.1
+
