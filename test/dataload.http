@@ -1,5 +1,6 @@
-@server = http://localhost:4004
-
+#@server = http://localhost:4004
+### !!!! YOU MUST CHANGE THE SERVER TO YOUR ACCCOUNT INFO to make it work.
+@server =https://org-space-cap-temporal-srv.cfapps.region.hana.ondemand.com
 
 
 ### Business Object Load
@@ -31,10 +32,10 @@ Content-Type: application/json
 
 
 ### Business Object - Read
-GET {{server}}/admin/WorkAssignments?sap-valid-at=date'2020-01-01' HTTP/1.1
+GET {{server}}/admin/WorkAssignments?sap-valid-at=date'2021-02-13' HTTP/1.1
 
 ### Business Object - Read
-GET {{server}}/admin/WorkAssignments?sap-valid-from=date'2020-01-01'&sap-valid-to=date'2020-12-31' HTTP/1.1
+GET {{server}}/admin/WorkAssignments?sap-valid-from=date'2020-01-01'&sap-valid-to=date'2199-12-31' HTTP/1.1
 
 
 ### Business Object - Read

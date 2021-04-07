@@ -7,6 +7,6 @@ using {
 } from '@sap/cds/common';
 
 
-entity WorkAssignments : cuid, temporal, managed{
-  role    : String(111);
+entity WorkAssignments : cuid, temporal, managed {
+    role : String(111);
 }
